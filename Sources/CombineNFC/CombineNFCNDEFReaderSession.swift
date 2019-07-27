@@ -1,3 +1,4 @@
+#if canImport(CoreNFC)
 import Combine
 import CoreNFC
 import Foundation
@@ -19,7 +20,7 @@ public final class CombineNFCNDEFReaderSession {
         return self
     }
 
-    public func connect(to tag: NFCNDEFTag) -> Future<(CombineNFCNDEFReaderSession, NFCNDEFTag), Error> {
+    public func connect(to tag: NFCNDEFTag) -> Future<(CombineNFCNDEFReaderSession, CombineNFCNDEFTag), Error> {
         .init { [weak self] completion in
             self?.session.connect(to: tag) { error in
                 if let error = error {
@@ -27,7 +28,7 @@ public final class CombineNFCNDEFReaderSession {
                     return
                 }
                 guard let self = self else { return }
-                completion(.success((self, tag)))
+                completion(.success((self, CombineNFCNDEFTag(tag: tag))))
             }
         }
     }

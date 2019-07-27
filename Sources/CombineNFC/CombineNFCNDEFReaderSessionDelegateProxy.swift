@@ -1,3 +1,4 @@
+#if canImport(CoreNFC)
 import Combine
 import CoreNFC
 import Foundation
@@ -28,3 +29,4 @@ final class CombineNFCNDEFReaderSessionDelegateProxy: NSObject, NFCNDEFReaderSes
         subject.subscribe(subscriber)
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(CoreNFC)
 import Combine
 import CoreNFC
 import Foundation
@@ -60,3 +61,4 @@ public struct CombineNFCNDEFTag {
         }
     }
 }
+#endif

@@ -1,3 +1,4 @@
+#if canImport(CoreNFC)
 import Combine
 import CoreNFC
 
@@ -10,3 +11,4 @@ extension NFCNDEFReaderSession {
                                     alertMessage: alertMessage)
     }
 }
+#endif

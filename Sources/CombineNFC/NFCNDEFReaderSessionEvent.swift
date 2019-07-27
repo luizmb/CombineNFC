@@ -1,3 +1,4 @@
+#if canImport(CoreNFC)
 import CoreNFC
 
 public enum NFCNDEFReaderSessionEvent {
@@ -5,3 +6,4 @@ public enum NFCNDEFReaderSessionEvent {
     case didDetect(tags: [NFCNDEFTag])
     case didBecomeActive
 }
+#endif
