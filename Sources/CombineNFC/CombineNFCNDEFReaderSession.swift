@@ -65,7 +65,7 @@ public final class CombineNFCNDEFReaderSession {
             .eraseToAnyPublisher()
     }
 
-    public var didBecomeActive: AnyPublisher<Void, Never> {
+    public var onBecomeActive: AnyPublisher<Void, Never> {
         delegate
             .compactMap { event in
                 guard case .didBecomeActive = event else { return nil }
