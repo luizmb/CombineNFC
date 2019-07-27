@@ -6,7 +6,7 @@ final class CombineNFCTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(CombineNFC().text, "Hello, World!")
+        // XCTAssertEqual(CombineNFC().text, "Hello, World!")
     }
 
     static var allTests = [
